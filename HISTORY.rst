@@ -34,8 +34,13 @@
 
 .. :changelog:
 
-Unreleased Changes
-------------------
+..
+  Unreleased Changes
+  ------------------
+
+
+
+
 * General
     * During builds of the InVEST documentation, the packages
       ``sphinx-rtd-theme`` and ``sphinx-reredirects`` will be pulled from
