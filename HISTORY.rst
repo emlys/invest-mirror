@@ -35,8 +35,12 @@
 
 .. :changelog:
 
-Unreleased Changes
-------------------
+..
+  Unreleased Changes
+  ------------------
+
+3.13.0.post0 (2023-04-04)
+-------------------------
 
 * HRA
     * Fixed a bug in HRA where the model would error when all exposure and
