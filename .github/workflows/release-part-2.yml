@@ -10,10 +10,10 @@ on:
 env:
   GITHUB_TOKEN: ${{ secrets.AUTORELEASE_BOT_PAT }}
 
-# permissions:
-#   contents: write
-#   pull-requests: write
-#   actions: write
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
 
 jobs:
   roll_back_release:
@@ -80,6 +80,7 @@ jobs:
           echo "This release includes the following fixes and features:" > notes.rst
           echo "" >> notes.rst
           sed -n "/$VERSION/,/^$/p" HISTORY.rst | tail -n +3 >> notes.rst
+          cat notes.rst
           gh release create $VERSION \
             --verify-tag \
             --title $VERSION \
@@ -90,7 +91,8 @@ jobs:
         # this is the only step that can't be rolled back
         run: |
           twine upload \
-            --username ${{ secrets.PYPI_USERNAME }} \
+            --repository testpypi \
+            --username emlys \
             --password ${{ secrets.PYPI_PASSWORD }} \
             artifacts/natcap.invest*
 
