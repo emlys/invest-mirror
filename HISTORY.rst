@@ -41,6 +41,10 @@
 
 3.13.0b3 (2023-05-05)
 ---------------------
+* foo
+
+3.13.0a7 (2023-04-14)
+---------------------
 * General
     * Fixed a bug in the CLI where ``invest getspec --json`` failed on
       non-json-serializable objects such as ``pint.Unit``.
