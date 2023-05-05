@@ -35,8 +35,12 @@
 
 .. :changelog:
 
-Unreleased Changes
-------------------
+..
+  Unreleased Changes
+  ------------------
+
+3.13.0b4 (2023-05-05)
+---------------------
 * General
     * Fixed a bug in the CLI where ``invest getspec --json`` failed on
       non-json-serializable objects such as ``pint.Unit``.
